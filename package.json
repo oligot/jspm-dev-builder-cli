@@ -1,0 +1,19 @@
+{
+  "name": "jspm-dev-builder-cli",
+  "version": "0.0.1",
+  "description": "Incremental development builds with jspm",
+  "bin": {
+    "jspm-dev-builder": "cli.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Olivier Ligot",
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^1.4.3",
+    "commander": "^2.9.0",
+    "jspm-dev-builder": "^0.3.2",
+    "req-cwd": "^1.0.1"
+  }
+}
