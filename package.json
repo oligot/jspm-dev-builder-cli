@@ -11,9 +11,10 @@
   "author": "Olivier Ligot",
   "license": "MIT",
   "dependencies": {
-    "chokidar": "^1.4.3",
     "commander": "^2.9.0",
     "jspm-dev-builder": "^0.3.2",
-    "req-cwd": "^1.0.1"
+    "object-assign": "^4.0.1",
+    "req-cwd": "^1.0.1",
+    "sane": "^1.3.3"
   }
 }
