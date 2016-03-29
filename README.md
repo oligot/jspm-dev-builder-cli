@@ -2,6 +2,12 @@
 
 > Incremental development builds with jspm
 
+# DEPRECATED
+
+This project is now deprecated as it has been incorporated into jspm core.
+You can follow the corresponding issue on Github:
+https://github.com/jspm/jspm-cli/issues/1572
+
 ## Motivations
 
 By default, jspm fetches and transpiles all the files in the browser which is great as you don't have to configure anything.
