@@ -2,11 +2,10 @@
 
 > Incremental development builds with jspm
 
-# DEPRECATED
+## 0.17
 
-This project is now deprecated as it has been incorporated into jspm core.
-You can follow the corresponding issue on Github:
-https://github.com/jspm/jspm-cli/issues/1572
+This project has been incorporated into jspm core and is available in version 0.17.0-beta.12.
+You can continue to use this project for 0.16.x projects, but you should prefer the built-in feature for 0.17.x projects.
 
 ## Motivations
 
