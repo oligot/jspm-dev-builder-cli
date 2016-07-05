@@ -1,5 +1,6 @@
 'use strict';
 
+const fs = require('fs');
 const DevBuilder = require('jspm-dev-builder');
 const sane = require('sane');
 const reqCwd = require('req-cwd');
@@ -7,6 +8,14 @@ const objectAssign = require('object-assign');
 const jspm = reqCwd('jspm');
 
 function build(options) {
+
+  DevBuilder.prototype.logError = function() {
+    const args = Array.prototype.slice.call(arguments);
+    const content = `console.error(${JSON.stringify(args.join('\n'))});`;
+    fs.writeFileSync(options.outLoc, content);
+    console.log.apply(console, arguments);
+  };
+
   var appBuilder = new DevBuilder(objectAssign({}, options, {
     jspm: jspm,
     logPrefix: reqCwd('./package.json').name,
