@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const DevBuilder = require('jspm-dev-builder');
-const sane = require('sane');
+const chokidar = require('chokidar');
 const reqCwd = require('req-cwd');
 const objectAssign = require('object-assign');
 const jspm = reqCwd('jspm');
@@ -36,9 +36,8 @@ function build(options) {
     }
     console.log(`Building into ${options.outLoc}`);
     appBuilder.build().then(function() {
-      var watcher = sane(process.cwd(), {
-        glob: files,
-        watchman: true
+      var watcher = chokidar.watch(files, {
+        usePolling: true
       });
       watcher.on('change', function(changed) {
         console.log(`${changed} changed: rebuilding...`);
